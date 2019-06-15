@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import Information from '../Information/Information';
 
 
 const SummaryWrapper = styled.div`
@@ -16,7 +17,7 @@ const Title = styled.h2`
 `;
 
 const Info = styled.div`
-    height:10px;
+    
 `;
 
 
@@ -25,7 +26,13 @@ const Summary = () => (
     <Title>
         Summary
     </Title>
-    <Info />
+    <Info>
+      <Information first="Test Week" second="TW 1903" />
+      <Information first="Owner" second="Jacob Johnsson" />
+      <Information first="Contact" second="javob@scania.com" />
+      <Information first="Last Update" second="12 April 2019" />
+      <Information first="Updated by:" second="Nikolas Johnsson" />
+    </Info>
   </SummaryWrapper>
 );
 

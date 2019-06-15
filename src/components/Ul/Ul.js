@@ -10,12 +10,12 @@ const UL = styled.ul`
 `;
 
 const Ul = ({
-  items, show, box, link, side,
+  items, show, box, link,
 }) => (
   <UL show={show}>
     {
       items.map((item, index) => (
-        <Li key={index} item={item} box={box} link={link} side={side} />
+        <Li key={index} item={item} box={box} link={link} />
       ))
     }
   </UL>

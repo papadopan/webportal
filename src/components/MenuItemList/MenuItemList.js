@@ -8,7 +8,7 @@ const MenuItemListWrapper = styled.ul`
     list-style:none;
 `;
 
-const itemsList = ['EMS 9', 'Overview', 'SOP', 'Documentation', 'Team', 'History', 'Upcoming Task', 'Notification'];
+const itemsList = ['EMS 9', 'Overview', 'SOP', 'Team', 'History', 'Upcoming', 'Notification'];
 
 const MenuItemList = () => (
   <MenuItemListWrapper>

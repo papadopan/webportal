@@ -22,13 +22,13 @@ const Title = styled.span`
 `;
 
 
-const Box = ({ title, textList, row }) => (
-  <NavLink to="Overview">
-    <BoxWrapper row={row}>
+const Box = ({ title, textList, link }) => (
+  <NavLink to={link}>
+    <BoxWrapper>
       <Title>
         {title}
       </Title>
-      <Ul items={textList} show={false} box link="Overview" />
+      <Ul items={textList} show={false} box />
     </BoxWrapper>
   </NavLink>
 );

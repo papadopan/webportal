@@ -15,7 +15,7 @@ const SidebarWrapper = styled.div`
     padding-top: 1.5rem;
 `;
 
-const routerList = [{ title: 'dashboard' }, { title: 'profile' }];
+const routerList = [{ title: 'dashboard' }];
 const ecuList = [{ title: 'EMS 9', notification: '4' }, { title: 'CMS 1' }, { title: 'BMS 2', notification: '2' }];
 const favouritesList = [{ title: 'BMS 1', notification: '3' }, { title: 'CMS 5', notification: '6' }];
 

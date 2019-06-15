@@ -33,7 +33,7 @@ const Logo = () => (
   <LogoWrapper>
     <Img src={require('../../assets/logo.svg')} />
     <Line />
-    <Title>SOPHIA</Title>
+    <Title>Help Desk</Title>
   </LogoWrapper>
 
 );

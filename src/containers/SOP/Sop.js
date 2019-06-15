@@ -1,17 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import ListBox from '../../components/ListBox/ListBox';
 import PopUp from '../../components/PopUp/PopUp';
+import MenuBar from '../../components/MenuBar/MenuBar';
 
 const SopWrapper = styled.div`
     margin-left: 22rem;
-    padding: 3rem;
+    position:relative;
+`;
+
+const SopBody = styled.div`
+  padding: 3rem;
+  opacity:${props => (props.opened ? '0.3' : '1')};
+  transition: all .5s;
 `;
 
 const Title = styled.h1`
     color: var(--color-blue);
     font-family: 'Scania Sans Headline';
     font-size: 2.6rem;
+    z-index:1;
 
 `;
 
@@ -52,14 +60,20 @@ const itemsList = [
 ];
 
 
-const Sop = () => (
-  <SopWrapper>
-    <Title>
-        EMS 9 - SOP
-    </Title>
-    <ListBox row={false} itemsList={itemsList} />
-    <PopUp />
-  </SopWrapper>
-);
+const Sop = () => {
+  const [isOpened, setIsOpened] = useState(false);
+  return (
+    <SopWrapper>
+      <MenuBar />
+      <PopUp isOpened={isOpened} clicked={() => setIsOpened(false)} />
+      <SopBody opened={isOpened}>
+        <Title>
+          EMS 9 - SOP
+        </Title>
+        <ListBox itemsList={itemsList} clicked={() => setIsOpened(true)} />
+      </SopBody>
+    </SopWrapper>
+  );
+};
 
 export default Sop;

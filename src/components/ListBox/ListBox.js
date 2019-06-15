@@ -5,18 +5,18 @@ import Box from '../Box/Box';
 
 const ListBoxWrapper = styled.div`
     height:100%
-    width:100%;
     margin-top: 1.5rem;
     display: flex;
-    flex-direction: ${props => (props.row ? 'row' : 'column')}
+    flex-direction: column;
+  }
 `;
 
 
-const ListBox = ({ row, itemsList }) => (
-  <ListBoxWrapper row={row}>
+const ListBox = ({ itemsList, clicked }) => (
+  <ListBoxWrapper onClick={clicked}>
     {
       itemsList.map((item, index) => (
-        <Box textList={item.results} row={row} index={index} title={item.results[0].header} />
+        <Box textList={item.results} index={index} title={item.results[0].header} />
       ))
     }
   </ListBoxWrapper>
