@@ -24,8 +24,12 @@ const Ul = ({
 
 Ul.propTypes = {
   show: propTypes.bool.isRequired,
-  box: propTypes.bool.isRequired,
+  box: propTypes.bool,
   link: propTypes.string.isRequired,
+};
+
+Ul.defaultProps = {
+  box: false,
 };
 
 export default Ul;

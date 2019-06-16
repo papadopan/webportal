@@ -44,10 +44,18 @@ const Li = ({
 );
 
 Li.propTypes = {
-  item: propTypes.node.isRequired,
+  item: propTypes.shape({
+    title: propTypes.string.isRequired,
+    notification: propTypes.string,
+  }).isRequired,
   box: propTypes.bool.isRequired,
   link: propTypes.string,
-  side: propTypes.bool.isRequired,
+  side: propTypes.bool,
+};
+
+Li.defaultProps = {
+  side: false,
+  link: '',
 };
 
 export default Li;

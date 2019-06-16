@@ -417,11 +417,19 @@ const TaskTable = ({
 };
 
 TaskTable.propTypes = {
-  notifications: propTypes.bool.isRequired,
-  upcoming: propTypes.bool.isRequired,
-  history: propTypes.bool.isRequired,
-  sideUpcoming: propTypes.bool.isRequired,
-  sideCompleted: propTypes.bool.isRequired,
+  notifications: propTypes.bool,
+  upcoming: propTypes.bool,
+  history: propTypes.bool,
+  sideUpcoming: propTypes.bool,
+  sideCompleted: propTypes.bool,
+};
+
+TaskTable.defaultProps = {
+  notifications: false,
+  upcoming: false,
+  history: false,
+  sideUpcoming: false,
+  sideCompleted: false,
 };
 
 export default TaskTable;

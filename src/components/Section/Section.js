@@ -29,7 +29,12 @@ const Section = ({ title, items }) => (
 
 Section.propTypes = {
   title: propTypes.string.isRequired,
-  items: propTypes.node.isRequired,
+  items: propTypes.arrayOf(
+    propTypes.shape({
+      title: propTypes.string.isRequired,
+      notification: propTypes.string,
+    }),
+  ).isRequired,
 };
 
 export default Section;

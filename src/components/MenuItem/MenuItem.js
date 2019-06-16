@@ -17,22 +17,15 @@ const MenuAnchor = styled.a`
     }
 `;
 
-const activeClassName = 'active';
-const StyledNavLink = styled(NavLink).attrs({
-  activeClassName,
-})`
-  &.${activeClassName} {
-    color: red;
-  }`;
 
 const MenuItem = ({ item, index }) => (
-  <StyledNavLink to={item} exact activeClassName>
+  <NavLink to={item} exact>
     <MenuItemWrapper>
       <MenuAnchor index={index}>
         {item}
       </MenuAnchor>
     </MenuItemWrapper>
-  </StyledNavLink>
+  </NavLink>
 );
 
 MenuItem.propTypes = {
