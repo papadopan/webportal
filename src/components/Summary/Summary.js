@@ -1,31 +1,28 @@
 import React from 'react';
 import styled from 'styled-components';
 import Information from '../Information/Information';
-
+import Title from '../Title/Title'
 
 const SummaryWrapper = styled.div`
-    width:30%;
-    flex:1;
-    order:1
+  flex:1;
+    order:1;
+
+    @media ${props=> props.theme.mediaQueries.medium}{
+      width:100%;
+      margin-bottom: 3rem;
+    }
 `;
 
-const Title = styled.h2`
-    color: var(--color-blue);
-    font-family: 'Scania Sans Condensed';
-    font-size: 2.4rem;
-    line-height: 3rem;
-`;
+
 
 const Info = styled.div`
-    
+  
 `;
 
 
 const Summary = () => (
   <SummaryWrapper>
-    <Title>
-        Summary
-    </Title>
+    <Title title="Summary"/>
     <Info>
       <Information first="Test Week" second="TW 1903" />
       <Information first="Owner" second="Jacob Johnsson" />

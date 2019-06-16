@@ -5,7 +5,7 @@ import propTypes from 'prop-types';
 
 const MenuItemWrapper = styled.li``;
 
-const MenuAnchor = styled.a`
+const MenuAnchor = styled.span`
     font-size:1.4rem;
     margin-right: ${props => (props.index === 0 ? '6rem' : '3rem')};
     color: ${props => (props.index === 0 ? 'var(--color-blue)' : 'var(--color-mediumGrey)')};

@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import {NavLink} from 'react-router-dom'
 
 import Section from '../Section/Section';
 import Ul from '../Ul/Ul';
@@ -13,6 +14,10 @@ const SidebarWrapper = styled.div`
     background: var(--color-blue);
     height:100%;
     padding-top: 1.5rem;
+
+    @media ${props=> props.theme.mediaQueries.large} {
+      left:-22rem;
+    }
 `;
 
 const routerList = [{ title: 'dashboard' }];
@@ -21,7 +26,9 @@ const favouritesList = [{ title: 'BMS 1', notification: '3' }, { title: 'CMS 5',
 
 const Sidebar = () => (
   <SidebarWrapper>
-    <Ul items={routerList} show link="/" />
+    <NavLink to="/">
+      <Ul items={routerList} show />
+    </NavLink>
     <Section title="Your ECU" items={ecuList} />
     <Section title="Favourites" items={favouritesList} />
   </SidebarWrapper>

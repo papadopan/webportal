@@ -5,6 +5,7 @@ import propTypes from 'prop-types';
 import Navbar from '../components/Navbar/Navbar';
 import Sidebar from '../components/Sidebar/Sidebar';
 
+
 const LayoutWrapper = styled.div`
     width:100%;
     min-height:calc(100vh - 8rem);

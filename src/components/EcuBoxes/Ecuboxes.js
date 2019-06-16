@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-
-
+import { NavLink } from 'react-router-dom';
 
 import Box from '../Box/Box';
 
@@ -42,7 +41,9 @@ const Ecuboxes = () => (
   <EcuBoxWrapper>
     {
         itemsList.map((item, index) => (
-          <Box textList={item.results} index={index} title={item.results[0].header} link="Overview" />
+          <NavLink key={index} to="Overview">
+            <Box  textList={item.results} index={index} title={item.results[0].header} />
+          </NavLink>
         ))
     }
   </EcuBoxWrapper>

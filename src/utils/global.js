@@ -26,15 +26,6 @@ html {
     --color-green: ${props => props.theme.colors.green};
     --color-teriary: ${props => props.theme.colors.teriary};
     
-    @media ${props => props.theme.mediaQueries.smaller}{
-    font-size: 60%;
-    color:red;
-    }
-
-    @media ${props => props.theme.mediaQueries.smallest}{
-        font-size: 50%;
-        color:blue;
-    }
 }
 
 a, button, textarea, input{

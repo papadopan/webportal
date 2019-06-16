@@ -3,10 +3,15 @@ import styled from 'styled-components';
 import ListBox from '../../components/ListBox/ListBox';
 import PopUp from '../../components/PopUp/PopUp';
 import MenuBar from '../../components/MenuBar/MenuBar';
+import Header from '../../components/Header/Header';
 
 const SopWrapper = styled.div`
     margin-left: 22rem;
     position:relative;
+
+    @media ${props => props.theme.mediaQueries.large}{
+      margin-left: 0;
+    }
 `;
 
 const SopBody = styled.div`
@@ -14,15 +19,6 @@ const SopBody = styled.div`
   opacity:${props => (props.opened ? '0.3' : '1')};
   transition: all .5s;
 `;
-
-const Title = styled.h1`
-    color: var(--color-blue);
-    font-family: 'Scania Sans Headline';
-    font-size: 2.6rem;
-    z-index:1;
-
-`;
-
 
 const itemsList = [
   {
@@ -67,9 +63,7 @@ const Sop = () => {
       <MenuBar />
       <PopUp isOpened={isOpened} clicked={() => setIsOpened(false)} />
       <SopBody opened={isOpened}>
-        <Title>
-          EMS 9 - SOP
-        </Title>
+        <Header header="EMS 9 - SOP"/>
         <ListBox itemsList={itemsList} clicked={() => setIsOpened(true)} />
       </SopBody>
     </SopWrapper>

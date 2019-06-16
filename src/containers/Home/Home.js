@@ -3,41 +3,26 @@ import styled from 'styled-components';
 
 import Ecuboxes from '../../components/EcuBoxes/Ecuboxes';
 import Timeline from '../../components/Timeline';
+import Title from '../../components/Title/Title';
+import Header from '../../components/Header/Header';
 
 const HomeWrapper = styled.div`
     margin-left:26.5rem;
     padding-top: 3rem;
     padding-right: 3rem;
+    @media ${props => props.theme.mediaQueries.large}{
+      margin-left: 3.5rem;
+    }
 `;
-
-const Header = styled.h1`
-    font-size: 2.6rem;
-    line-height: 3rem;
-    font-weight:bold;
-    margin-bottom: 3rem;
-    font-family: 'Scania Sans Headline';
-    color: var(--color-blue);
-`;
-const Title = styled.div`
-    font-size: 2.4rem;
-    line-height: 3rem;
-    font-weight:bold;
-    color: var(--color-blue);
-`;
-
 
 const Home = () => (
   <HomeWrapper>
-    <Header>
-        Welcome to Support Desk
-    </Header>
+    <Header header=" Welcome to Support Desk"/>
     <Title>
         Current ECUs
     </Title>
     <Ecuboxes />
-    <Title>
-        Timeline
-    </Title>
+    <Title title="Timeline"/>
     <Timeline />
   </HomeWrapper>
 );

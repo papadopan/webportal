@@ -1,13 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
-import { NavLink } from 'react-router-dom';
 import propTypes from 'prop-types';
 
 
 const LiItem = styled.li`
-  color: var(--color-darkGrey);
+  
   line-height:2rem;
-  font-size: ${props => (props.box ? '1rem' : '1.4rem')}
+  font-size: ${props => (props.box ? '1rem' : '1.4rem')};
   height:${props => (props.box ? '3rem' : '4rem')};
   width:100%;
   display:flex;
@@ -16,6 +15,7 @@ const LiItem = styled.li`
   justify-content: space-between;
   padding: ${props => (props.side ? '0rem' : '0 1.5rem')};
   margin-top : ${props => (props.box ? '.5rem' : '')};
+  color: ${props => (props.box ? 'var(--color-darkGrey)' : 'var(--color-white)')};
 
   &:hover{
     background: ${props => (props.box ? '' : 'black')};
@@ -29,9 +29,8 @@ const Span = styled.span`
 `;
 
 const Li = ({
-  item, box, link, side,
-}) => (
-  <NavLink to={link}>
+  item, box, side,
+  }) => (
     <LiItem box={box} side={side}>
       <Span bold={false}>
         {item.title}
@@ -40,7 +39,6 @@ const Li = ({
         {item.notification}
       </Span>
     </LiItem>
-  </NavLink>
 );
 
 Li.propTypes = {

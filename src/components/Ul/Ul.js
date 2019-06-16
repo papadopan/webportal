@@ -11,12 +11,12 @@ const UL = styled.ul`
 `;
 
 const Ul = ({
-  items, show, box, link,
+  items, show, box,
 }) => (
   <UL show={show}>
     {
       items.map((item, index) => (
-        <Li key={index} item={item} box={box} link={link} />
+        <Li key={index} item={item} box={box} />
       ))
     }
   </UL>
@@ -25,7 +25,6 @@ const Ul = ({
 Ul.propTypes = {
   show: propTypes.bool.isRequired,
   box: propTypes.bool,
-  link: propTypes.string.isRequired,
 };
 
 Ul.defaultProps = {

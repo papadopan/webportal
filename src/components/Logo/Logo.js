@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import {NavLink} from 'react-router-dom';
 
 const Img = styled.img`
     background-repeat: no-repeat;
@@ -31,7 +32,9 @@ const Title = styled.h1`
 
 const Logo = () => (
   <LogoWrapper>
-    <Img src={require('../../assets/logo.svg')} />
+    <NavLink to="/">
+      <Img src={require('../../assets/logo.svg')} />
+    </NavLink>
     <Line />
     <Title>Help Desk</Title>
   </LogoWrapper>

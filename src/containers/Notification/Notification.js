@@ -5,10 +5,14 @@ import styled from 'styled-components';
 import TaskTable from '../../components/Table/Table';
 import MenuBar from '../../components/MenuBar/MenuBar';
 import PopUp from '../../components/PopUp/PopUp';
+import Header from '../../components/Header/Header'
 
 const NotificationWrapper = styled.div`
     margin-left: 22rem;
     position: relative;
+    @media ${props => props.theme.mediaQueries.large}{
+      margin-left: 0;
+    }
 `;
 
 const NotificationBody = styled.div`
@@ -17,15 +21,6 @@ const NotificationBody = styled.div`
 `;
 
 
-const Header = styled.h1`
-   font-size: 2.6rem;
-    line-height: 3rem;
-    font-weight:bold;
-    margin-bottom: 3rem;
-    font-family: 'Scania Sans Headline';
-    color: var(--color-blue);
-`;
-
 const Notification = () => {
   const [isOpened, setIsOpened] = useState(false);
   return (
@@ -33,7 +28,7 @@ const Notification = () => {
       <MenuBar />
       <PopUp isOpened={isOpened} notification clicked={() => setIsOpened(false)} />
       <NotificationBody isOpened={isOpened}>
-        <Header> EMS 9 - Notifications</Header>
+        <Header header="EMS 9 - Notifications"/>
         <TaskTable notifications clicked={() => setIsOpened(true)} />
       </NotificationBody>
     </NotificationWrapper>

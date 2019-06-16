@@ -138,10 +138,10 @@ const upcomingData = [
     a: 'SOP2', b: 'SOP Green Arrow QA in S', c: 'Document that describes the tests', d: '25/03/2019', e: 'Overdue', key: '7',
   },
   {
-    a: 'SOP3', b: 'PSE documentation in P', c: 'See EOL', d: '17/03/2019', e: 'Overdue', key: '7',
+    a: 'SOP3', b: 'PSE documentation in P', c: 'See EOL', d: '17/03/2019', e: 'Overdue', key: '8',
   },
   {
-    a: 'SOP1', b: 'EOL Specification in S', c: 'Describes the parameters of EOL', d: '11/03/2019', e: 'Overdue', key: '7',
+    a: 'SOP1', b: 'EOL Specification in S', c: 'Describes the parameters of EOL', d: '11/03/2019', e: 'Overdue', key: '9',
   },
 
 ];
@@ -190,10 +190,10 @@ const historyData = [
     a: 'SOP2', b: 'TW 1903', c: 'Bug Fix', d: '12/03/2019', e: 'Mike', key: '7',
   },
   {
-    a: 'SOP3', b: 'TW 1903', c: 'New Functionality', d: '11/03/2019', e: 'John', key: '7',
+    a: 'SOP3', b: 'TW 1903', c: 'New Functionality', d: '11/03/2019', e: 'John', key: '8',
   },
   {
-    a: 'SOP1', b: 'TW 1903', c: 'New Functionality', d: '05/03/2019', e: 'Jacob', key: '7',
+    a: 'SOP1', b: 'TW 1903', c: 'New Functionality', d: '05/03/2019', e: 'Jacob', key: '9',
   },
 
 ];
@@ -291,13 +291,13 @@ const sideUpcomingData = [
     a: 'Requirements', b: '28/05/2019', c: 'TW 1905', d: 'Overdue', key: '1',
   },
   {
-    a: 'Diagnostic Spec.', b: '24/05/2019', c: 'TW 1905', d: 'Overdue', key: '1',
+    a: 'Diagnostic Spec.', b: '24/05/2019', c: 'TW 1905', d: 'Overdue', key: '2',
   },
   {
-    a: 'Trouble Codes', b: '23/04/2019', c: 'TW 1905', d: 'On-Time', key: '1',
+    a: 'Trouble Codes', b: '23/04/2019', c: 'TW 1905', d: 'On-Time', key: '3',
   },
   {
-    a: 'Quality assurance', b: '19/04/2019', c: 'TW 1905', d: 'On-Time', key: '1',
+    a: 'Quality assurance', b: '19/04/2019', c: 'TW 1905', d: 'On-Time', key: '4',
   },
 
 
@@ -326,13 +326,13 @@ const sideCompletedData = [
     a: 'Requirements', b: '28/05/2019', c: 'TW 1905', d: 'Petersson', key: '1',
   },
   {
-    a: 'Diagnostic Spec.', b: '24/05/2019', c: 'TW 1905', d: 'Anders', key: '1',
+    a: 'Diagnostic Spec.', b: '24/05/2019', c: 'TW 1905', d: 'Anders', key: '2',
   },
   {
-    a: 'Trouble Codes', b: '23/04/2019', c: 'TW 1905', d: 'Jacob', key: '1',
+    a: 'Trouble Codes', b: '23/04/2019', c: 'TW 1905', d: 'Jacob', key: '3',
   },
   {
-    a: 'Quality assurance', b: '19/04/2019', c: 'TW 1905', d: 'Fredrik', key: '1',
+    a: 'Quality assurance', b: '19/04/2019', c: 'TW 1905', d: 'Fredrik', key: '4',
   },
 
 

@@ -2,24 +2,20 @@ import React from 'react';
 import styled from 'styled-components';
 import MenuBar from '../../components/MenuBar/MenuBar';
 import TeamBox from '../../components/TeamBox/TeamBox';
+import Header from '../../components/Header/Header'
 
 
 const TeamWrapper = styled.div`
     margin-left:22rem;
+    @media ${props => props.theme.mediaQueries.large}{
+      margin-left: 0;
+    }
 `;
 
 const TeamBody = styled.div`
     padding: 3rem;
 `;
 
-const Header = styled.h1`
-   font-size: 2.6rem;
-    line-height: 3rem;
-    font-weight:bold;
-    margin-bottom: 3rem;
-    font-family: 'Scania Sans Headline';
-    color: var(--color-blue);
-`;
 const Row = styled.div`
     display:flex;
     flex-wrap:wrap;
@@ -88,12 +84,10 @@ const Team = () => (
   <TeamWrapper>
     <MenuBar />
     <TeamBody>
-      <Header>
-          ems 9 - team
-      </Header>
+      <Header header="EMS 9 - TEAM"/>
       <Row>
         {
-            people.map((team, index) => <TeamBox key={index} team={team} />)
+          people.map((team, index) => <TeamBox key={index} team={team} />)
         }
       </Row>
     </TeamBody>
