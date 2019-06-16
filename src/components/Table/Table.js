@@ -2,6 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import Table from 'rc-table';
 import 'rc-table/assets/index.css';
+import propTypes from 'prop-types';
+
 
 import Complete from '../Buttons/Complete/Complete';
 import Info from '../Buttons/Info/Info';
@@ -173,7 +175,7 @@ const historyData = [
     a: 'SOP3', b: 'TW 1910', c: 'Bug fix', d: '28/03/2019', e: 'Mike', key: '2',
   },
   {
-    a: 'SOP1', b: 'TW 1905', c: 'New functionality', d: '20/03/2019', e: 'Catherina', key: '3',
+    a: 'SOP1', b: 'TW 1902', c: 'New functionality', d: '20/03/2019', e: 'Catherina', key: '3',
   },
   {
     a: 'SOP4', b: 'TW 1905', c: 'Bug Fix', d: '15/03/2019', e: 'John', key: '4',
@@ -242,6 +244,101 @@ const notificationData = [
 ];
 
 
+const sideUpcomingColumns = [
+  {
+    title: 'Documents', dataIndex: 'a', key: 'a', width: 100,
+  },
+  {
+    title: 'Due Date', dataIndex: 'b', key: 'b', width: 100,
+  },
+  {
+    title: 'Test Week', dataIndex: 'c', key: 'c', width: 100,
+  },
+  {
+    title: 'Status',
+    dataIndex: 'd',
+    key: 'd',
+    width: 200,
+    render(value) {
+      if (value === 'Overdue') {
+        return (
+          <Overdue />
+        );
+      }
+      return (
+        <OnTime />
+      );
+    },
+  },
+  {
+    title: 'Action',
+    dataIndex: 'e',
+    key: 'e',
+    width: 200,
+    render() {
+      return (
+        <React.Fragment>
+          <Info />
+          <Complete />
+        </React.Fragment>
+      );
+    },
+  },
+];
+
+const sideUpcomingData = [
+  {
+    a: 'Requirements', b: '28/05/2019', c: 'TW 1905', d: 'Overdue', key: '1',
+  },
+  {
+    a: 'Diagnostic Spec.', b: '24/05/2019', c: 'TW 1905', d: 'Overdue', key: '1',
+  },
+  {
+    a: 'Trouble Codes', b: '23/04/2019', c: 'TW 1905', d: 'On-Time', key: '1',
+  },
+  {
+    a: 'Quality assurance', b: '19/04/2019', c: 'TW 1905', d: 'On-Time', key: '1',
+  },
+
+
+];
+
+
+const sideCompletedColumns = [
+  {
+    title: 'File Name', dataIndex: 'a', key: 'a', width: 100,
+  },
+  {
+    title: 'Upload Date', dataIndex: 'b', key: 'b', width: 100,
+  },
+  {
+    title: 'Test Week', dataIndex: 'c', key: 'c', width: 100,
+  },
+  {
+    title: 'Uploaded by', dataIndex: 'd', key: 'd', width: 100,
+  },
+
+
+];
+
+const sideCompletedData = [
+  {
+    a: 'Requirements', b: '28/05/2019', c: 'TW 1905', d: 'Petersson', key: '1',
+  },
+  {
+    a: 'Diagnostic Spec.', b: '24/05/2019', c: 'TW 1905', d: 'Anders', key: '1',
+  },
+  {
+    a: 'Trouble Codes', b: '23/04/2019', c: 'TW 1905', d: 'Jacob', key: '1',
+  },
+  {
+    a: 'Quality assurance', b: '19/04/2019', c: 'TW 1905', d: 'Fredrik', key: '1',
+  },
+
+
+];
+
+
 const BodyRow = styled.tr`
   &:hover {
     background: var(--color-teriary) !important;
@@ -257,27 +354,74 @@ const components = {
 };
 
 
-const TaskTable = ({ notifications, upcoming, history }) => {
+const TaskTable = ({
+  notifications, upcoming, history, sideUpcoming, sideCompleted, clicked,
+}) => {
   if (notifications) {
     return (
-      <Table columns={notificationColumns} data={notificationData} components={components} />
+      <Table
+        columns={notificationColumns}
+        data={notificationData}
+        components={components}
+        onRow={() => ({
+          onClick: clicked,
+        })}
+      />
     );
   }
 
   if (upcoming) {
     return (
-      <Table columns={upcomingColumns} data={upcomingData} components={components} />
+      <Table
+        columns={upcomingColumns}
+        data={upcomingData}
+        components={components}
+        onRow={() => ({
+          onClick: clicked,
+        })}
+      />
     );
   }
 
   if (history) {
     return (
-      <Table columns={historyColumns} data={historyData} components={components} />
+      <Table
+        columns={historyColumns}
+        data={historyData}
+        components={components}
+        onRow={() => ({
+          onClick: clicked,
+        })}
+      />
+    );
+  }
+
+  if (sideUpcoming) {
+    return (
+      <Table columns={sideUpcomingColumns} data={sideUpcomingData} components={components} />
+    );
+  }
+
+  if (sideCompleted) {
+    return (
+      <Table
+        columns={sideCompletedColumns}
+        data={sideCompletedData}
+        components={components}
+      />
     );
   }
   return (
     <Table columns={columns} data={data} components={components} />
   );
+};
+
+TaskTable.propTypes = {
+  notifications: propTypes.bool.isRequired,
+  upcoming: propTypes.bool.isRequired,
+  history: propTypes.bool.isRequired,
+  sideUpcoming: propTypes.bool.isRequired,
+  sideCompleted: propTypes.bool.isRequired,
 };
 
 export default TaskTable;

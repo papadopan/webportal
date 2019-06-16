@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import propTypes from 'prop-types';
 
 import Li from '../Li/Li';
 
@@ -20,5 +21,11 @@ const Ul = ({
     }
   </UL>
 );
+
+Ul.propTypes = {
+  show: propTypes.bool.isRequired,
+  box: propTypes.bool.isRequired,
+  link: propTypes.string.isRequired,
+};
 
 export default Ul;

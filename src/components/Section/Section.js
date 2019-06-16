@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import propTypes from 'prop-types';
 
 import Ul from '../Ul/Ul';
 
@@ -24,7 +25,11 @@ const Section = ({ title, items }) => (
     </Title>
     <Ul items={items} show link="/Overview" />
   </SectionWrapper>
-
 );
+
+Section.propTypes = {
+  title: propTypes.string.isRequired,
+  items: propTypes.node.isRequired,
+};
 
 export default Section;

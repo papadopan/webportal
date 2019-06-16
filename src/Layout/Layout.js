@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import propTypes from 'prop-types';
 
 import Navbar from '../components/Navbar/Navbar';
 import Sidebar from '../components/Sidebar/Sidebar';
@@ -20,5 +21,9 @@ const Layout = ({ children }) => (
     </LayoutWrapper>
   </React.Fragment>
 );
+
+Layout.propTypes = {
+  children: propTypes.element.isRequired,
+};
 
 export default Layout;

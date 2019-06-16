@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
+import propTypes from 'prop-types';
 
 
 const LiItem = styled.li`
@@ -41,5 +42,12 @@ const Li = ({
     </LiItem>
   </NavLink>
 );
+
+Li.propTypes = {
+  item: propTypes.node.isRequired,
+  box: propTypes.bool.isRequired,
+  link: propTypes.string,
+  side: propTypes.bool.isRequired,
+};
 
 export default Li;

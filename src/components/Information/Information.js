@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import propTypes from 'prop-types';
 
 
 const InfomrationWrapper = styled.div`
@@ -22,4 +23,8 @@ const Information = ({ first, second }) => (
   </InfomrationWrapper>
 );
 
+Information.propTypes = {
+  first: propTypes.string.isRequired,
+  second: propTypes.string.isRequired,
+};
 export default Information;

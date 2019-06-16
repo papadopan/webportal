@@ -1,12 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import ListBox from '../../components/ListBox/ListBox';
 import Ecuboxes from '../../components/EcuBoxes/Ecuboxes';
+import Timeline from '../../components/Timeline';
 
 const HomeWrapper = styled.div`
     margin-left:26.5rem;
     padding-top: 3rem;
+    padding-right: 3rem;
 `;
 
 const Header = styled.h1`
@@ -34,6 +35,10 @@ const Home = () => (
         Current ECUs
     </Title>
     <Ecuboxes />
+    <Title>
+        Timeline
+    </Title>
+    <Timeline />
   </HomeWrapper>
 );
 

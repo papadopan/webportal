@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import MenuBar from '../../components/MenuBar/MenuBar';
 import Summary from '../../components/Summary/Summary';
 import UpcomingList from '../../components/UpcomingList/UpcomingList';
+import TimelineVis from '../../components/Timeline';
 
 const OverviewWrapper = styled.div`
     margin-left:22rem;
@@ -36,6 +37,10 @@ const Overview = () => (
         <Summary />
         <UpcomingList />
       </Row>
+      <Title>
+        Timeline
+      </Title>
+      <TimelineVis />
     </OverviewBody>
   </OverviewWrapper>
 );

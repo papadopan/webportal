@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
+import propTypes from 'prop-types';
 
 import Ul from '../Ul/Ul';
 
@@ -32,5 +33,12 @@ const Box = ({ title, textList, link }) => (
     </BoxWrapper>
   </NavLink>
 );
+
+
+Box.propTypes = {
+  title: propTypes.string.isRequired,
+  textList: propTypes.node.isRequired,
+  link: propTypes.string.isRequired,
+};
 
 export default Box;

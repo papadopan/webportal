@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
+import propTypes from 'prop-types';
 
 const MenuItemWrapper = styled.li``;
 
@@ -33,5 +34,10 @@ const MenuItem = ({ item, index }) => (
     </MenuItemWrapper>
   </StyledNavLink>
 );
+
+MenuItem.propTypes = {
+  item: propTypes.string.isRequired,
+  index: propTypes.number.isRequired,
+};
 
 export default MenuItem;

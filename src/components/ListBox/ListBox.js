@@ -1,5 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
+import propTypes from 'prop-types';
+
 
 import Box from '../Box/Box';
 
@@ -21,5 +23,10 @@ const ListBox = ({ itemsList, clicked }) => (
     }
   </ListBoxWrapper>
 );
+
+ListBox.propTypes = {
+  itemsList: propTypes.node.isRequired,
+  clicked: propTypes.func.isRequired,
+};
 
 export default ListBox;

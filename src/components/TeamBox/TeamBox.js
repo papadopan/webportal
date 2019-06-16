@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import propTypes from 'prop-types';
 
 const TeamBoxWrapper = styled.div`
     height:10rem;
@@ -48,5 +49,9 @@ const TeamBox = ({ team }) => (
     </TeamBoxWrapper>
   </TeamBoxDiv>
 );
+
+TeamBox.propTypes = {
+  team: propTypes.node.isRequired,
+};
 
 export default TeamBox;
