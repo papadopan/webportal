@@ -25,7 +25,7 @@ const people = [
   {
     title: 'System Owners',
     members: [
-      { name: 'Jacob Johnsson' },
+      { name: 'Marc Johnsson' },
       { name: 'Nickolas Johan' },
       { name: 'Peter Nickolo' },
     ],

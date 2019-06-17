@@ -41,7 +41,7 @@ const itemsList = [
     results: [
       { title: 'Test Week:', notification: 'TW1902', header: 'SOP 3' },
       { title: 'Last Updated:', notification: '12/04/2019, 09:23' },
-      { title: 'Updated by:', notification: 'Jacob Johnsson' },
+      { title: 'Updated by:', notification: 'Jim Johnsson' },
       { title: 'Approved Level:', notification: 'R&D' },
     ],
   },

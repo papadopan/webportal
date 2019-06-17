@@ -18,21 +18,21 @@ const itemsList = [
     results: [
       { title: 'Test Week:', notification: 'TW1905', header: 'EMS 9' },
       { title: 'Last Updated:', notification: '10/04/2019, 14:03' },
-      { title: 'Updated by:', notification: 'Jacob Johnson' },
+      { title: 'Updated by:', notification: 'Peter Johnson' },
     ],
   },
   {
     results: [
       { title: 'Test Week:', notification: 'TW110', header: 'CMS 1' },
       { title: 'Last Updated:', notification: '12/04/2019, 15:34' },
-      { title: 'Updated by:', notification: 'Jacob Johnson' },
+      { title: 'Updated by:', notification: 'John Petersson' },
     ],
   },
   {
     results: [
       { title: 'Test Week:', notification: 'TW1912', header: 'BMS 1' },
       { title: 'Last Updated:', notification: '10/04/2019, 14:03' },
-      { title: 'Updated by:', notification: 'Peter Johnsson' },
+      { title: 'Updated by:', notification: 'Nick Johnsson' },
     ],
   },
 ];
