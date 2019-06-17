@@ -12,23 +12,26 @@ const TeamBoxWrapper = styled.div`
 `;
 
 const TeamBoxDiv = styled.div`
-width:50%;`;
+    width:50%;
+    color: var(--color-blue)
+  `;
 
 const TeamTitle = styled.div`
-    flex:1;
-    order:1;
+  flex:1;
+  order:1;
+  font-weight: bold;
 `;
 
 const TeamMembers = styled.div`
-    flex:1;
-    order:2;
-    display:flex;
-    flex-direction:column;
+  flex:1;
+  order:2;
+  display:flex;
+  flex-direction:column;
 `;
 
 const Member = styled.span`
-    margin: 0 0 1rem 0;
-    
+  margin: 0 0 1rem 0;
+  text-decoration: underline; 
 `;
 
 const TeamBox = ({ team }) => (

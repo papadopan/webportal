@@ -12,12 +12,13 @@ const Img = styled.img`
     height: 46px;   
 `;
 const Title = styled.span`
-    margin-right:2rem
+    margin-right:2rem;
+    font-size:1.4rem;
 `;
 
 const Menu = () => (
   <MenuWrapper>
-    <Title>Antonios Papadopoulos</Title>
+    <Title>Johan Larsson</Title>
     <Img src={require('../../assets/symbol.svg')} />
   </MenuWrapper>
 );
