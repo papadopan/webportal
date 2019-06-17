@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import Ecuboxes from '../../components/EcuBoxes/Ecuboxes';
-import Timeline from '../../components/Timeline';
+import Timeline from '../../components/Timeline/Timeline';
 import Title from '../../components/Title/Title';
 import Header from '../../components/Header/Header';
 
@@ -23,7 +23,7 @@ const Home = () => (
     </Title>
     <Ecuboxes />
     <Title title="Timeline"/>
-    <Timeline />
+    <Timeline ecu={true} />
   </HomeWrapper>
 );
 

@@ -1,5 +1,5 @@
 import React, { Component, createRef } from 'react';
-import '../utils/vis.css';
+import '../../utils/vis.css';
 import { DataSet, Timeline } from 'vis';
 
 const groups = new DataSet([
@@ -9,9 +9,15 @@ const groups = new DataSet([
   { id: 4, content: 'SOP4' },
 ]);
 
+const groupsEcu = new DataSet([
+  { id: 1, content: 'EMS 9' },
+  { id: 2, content: 'CMS 1' },
+  { id: 3, content: 'BMS 2' },
+]);
+
 const items = new DataSet([
   {
-    id: 1, content: 'UFR, AER and FAD in S', start: '2019-06-19', group: 2, className: 'completed', title: 'Describes the diagnostic communication services and data for an ECU in ODX format (both application and boot). Imported to PIDD. ',
+    id: 1, content: 'UFR, AER and FAD in S', start: '2019-06-19', group: 2, title: 'Describes the diagnostic communication services and data for an ECU in ODX format (both application and boot). Imported to PIDD. ',
   },
   {
     id: 2, content: 'System design and model updated', start: '2019-06-14', group: 2, className: 'overdue',
@@ -83,7 +89,11 @@ class TimelineVis extends Component {
   }
 
   componentDidMount() {
-    this.network = new Timeline(this.appRef.current, items, groups, options);
+    if(!this.props.ecu){
+      this.network = new Timeline(this.appRef.current, items, groups, options);
+    } else {
+      this.network = new Timeline(this.appRef.current, items, groupsEcu, options);
+    }
   }
 
 

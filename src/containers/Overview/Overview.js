@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import MenuBar from '../../components/MenuBar/MenuBar';
 import Summary from '../../components/Summary/Summary';
 import UpcomingList from '../../components/UpcomingList/UpcomingList';
-import TimelineVis from '../../components/Timeline';
+import TimelineVis from '../../components/Timeline/Timeline';
 import Header from '../../components/Header/Header'
 
 const OverviewWrapper = styled.div`
