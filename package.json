@@ -10,7 +10,12 @@
 		"react-router-dom": "^5.0.1",
 		"react-scripts": "0.9.x",
 		"styled-components": "^4.2.1",
-		"vis": "^4.21.0"
+		"vis": "^4.21.0",
+		"eslint": "^5.16.0",
+		"eslint-config-airbnb": "^17.1.0",
+		"eslint-plugin-import": "^2.17.3",
+		"eslint-plugin-jsx-a11y": "^4.0.0",
+		"eslint-plugin-react": "^7.13.0"
 	},
 	"devDependencies": {
 		"eslint": "^5.16.0",
